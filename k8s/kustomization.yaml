@@ -6,4 +6,4 @@ resources:
 images:
 - name: hello-fastapi
   newName: sidneckel/hello-fastapi-k8s
-  newTag: 2fac89121c622e30a8b549a8466e5adad7f44c55
+  newTag: b23aa985d986d973c38e3b3ba0529607aca54351
