@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- deployment.yaml
+- service.yaml
+images:
+- name: hello-fastapi
+  newName: sidneckel/hello-fastapi-k8s
+  newTag: 2fac89121c622e30a8b549a8466e5adad7f44c55
