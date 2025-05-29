@@ -2,7 +2,9 @@ name: CICD
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - feature/test-docker
 
 jobs:
   build:
@@ -44,7 +46,7 @@ jobs:
         run: |
           git config --local user.name "GitHub Actions"
           git config --local user.email "actions@github.com"
-          git commit -am "Update kustomization.yaml with new image"
+          git commit -am "Update kustomization.yaml with new image" || echo "No changes to commit"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
